@@ -15,18 +15,20 @@ class App extends React.Component{
 
   movieUpdate = (newMovie, type='all') => {
     this.setState({isLoading: true});
-    const url = `http://www.omdbapi.com/?apikey=${API_KEY}&s=${newMovie}${type !== 'all' ? `&type=${type}` : ''}`;
+    const url = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${newMovie}${type !== 'all' ? `&type=${type}` : ''}`;
       fetch(url)
         .then(response => response.json())
-        .then(commits => this.setState({movies: commits.Search, isLoading: false}));
+        .then(commits => this.setState({movies: commits.Search, isLoading: false}))
+        .catch(err => console.log(err))
   }
   
 
   componentDidMount(){
-      const url = `http://www.omdbapi.com/?apikey=${API_KEY}`;
+      const url = `https://www.omdbapi.com/?apikey=${API_KEY}`;
       fetch(url)
         .then(response => response.json())
-        .then(commits => this.setState({movies: commits.Search}) );
+        .then(commits => this.setState({movies: commits.Search}))
+        .catch(err => console.log(err));
   }
   
 
