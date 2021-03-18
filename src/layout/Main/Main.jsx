@@ -14,8 +14,8 @@ function Main(props) {
                             <FilmCard key={film.imdbID} {...film} />
                         ))
                     ) : (
-                        <div style={{ margin: '30px auto', fontSize: '30px' }}>
-                            Dont't have films with such name
+                        <div className="not__found">
+                            <span>Don't have films with such name</span>
                         </div>
                     )}
                 </div>
