@@ -1,15 +1,8 @@
-.card{
-  width: 30%;
-  margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+.photo img {
+    width: 100%;
 }
-.photo img{
-  width: 100%;
-}
-.description{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

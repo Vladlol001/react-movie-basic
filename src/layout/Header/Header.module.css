@@ -1,13 +1,9 @@
-.header{
-  background: rgb(146, 101, 197, 0.3);
-  padding: 20px 0 ;
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.header__container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header__nav a{
-  display: inline-block;
-  margin: 10px;
+.header__nav a {
+    display: inline-block;
+    margin: 10px;
 }
